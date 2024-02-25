@@ -1,13 +1,35 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/header.tsx';
+import Footer from '../components/layout/footer.tsx';
 
 const posts = await getCollection('posts');
 ---
 
-<Layout title="Keystatic & Astro's Content Collections">
+<Layout title="Art Park Show Me Site">
   <div>
-    <h1>Keystatic ⚡️ + Astro 🚀</h1>
+
+      <div class="flex min-h-screen flex-col font-sans bg-neutral-200/80">
+          <Header />
+          <main class="max-w-none flex flex-1 flex-col">
+              <div class="flex-1">
+                  <div>THIS MIGHT BE THE ...SLOT...</div>
+              </div>
+          </main>
+          <Footer />
+      </div>
+
+      <hr/>
+      <hr/>
+      <hr/>
+      <hr/>
+      <hr/>
+      <div class="flex justify-center">
+          <h1 class="text-6xl font-bold text-center">Big Text Example</h1>
+      </div>
+
+
     <p>
       This homepage shows how to load data from Astro's content collections.
     </p>
