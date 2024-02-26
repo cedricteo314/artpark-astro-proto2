@@ -175,20 +175,13 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdoc"] };
 };
-"stations": {
-"first-post.mdoc": {
-	id: "first-post.mdoc";
-  slug: "first-post";
-  body: string;
-  collection: "stations";
-  data: any
-} & { render(): Render[".mdoc"] };
-};
 
 	};
 
 	type DataEntryMap = {
-		
+		"stations": {
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
