@@ -57,9 +57,9 @@ export default config({
 
 
 
-    posts: collection({
-      label: "Posts",
-      path: "content/posts/*/",
+    stations: collection({
+      label: "Stations",
+      path: "src/content/stations/*/",
       slugField: "title",
       schema: {
         title: fields.slug({
@@ -110,7 +110,7 @@ export default config({
 
     authors: collection({
       label: "Authors",
-      path: "content/authors/*",
+      path: "src/content/authors/*",
       slugField: "name",
       schema: {
         name: fields.slug({
@@ -132,7 +132,7 @@ export default config({
     }),
     externalArticles: collection({
       label: "External Article",
-      path: "content/externalArticles/*/",
+      path: "src/content/externalArticles/*/",
       slugField: "title",
       schema: {
         title: fields.slug({

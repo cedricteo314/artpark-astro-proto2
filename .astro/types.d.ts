@@ -163,7 +163,7 @@ declare module 'astro:content' {
   slug: "first-post";
   body: string;
   collection: "posts";
-  data: InferEntrySchema<"posts">
+  data: any
 } & { render(): Render[".mdoc"] };
 };
 "settings": {
@@ -175,16 +175,44 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdoc"] };
 };
-
-	};
-
-	type DataEntryMap = {
-		"stations": {
+"stations": {
+"biometrics-in-healthcare-revolutionizing-patient-identification-and-access-control/content.mdoc": {
+	id: "biometrics-in-healthcare-revolutionizing-patient-identification-and-access-control/content.mdoc";
+  slug: "biometrics-in-healthcare-revolutionizing-patient-identification-and-access-control/content";
+  body: string;
+  collection: "stations";
+  data: any
+} & { render(): Render[".mdoc"] };
+"the-benefits-and-drawbacks-of-biometric-security-systems/content.mdoc": {
+	id: "the-benefits-and-drawbacks-of-biometric-security-systems/content.mdoc";
+  slug: "the-benefits-and-drawbacks-of-biometric-security-systems/content";
+  body: string;
+  collection: "stations";
+  data: any
+} & { render(): Render[".mdoc"] };
+"the-ethical-concerns-of-biometric-data-collection-and-privacy-protection/content.mdoc": {
+	id: "the-ethical-concerns-of-biometric-data-collection-and-privacy-protection/content.mdoc";
+  slug: "the-ethical-concerns-of-biometric-data-collection-and-privacy-protection/content";
+  body: string;
+  collection: "stations";
+  data: any
+} & { render(): Render[".mdoc"] };
+"the-evolution-of-biometrics-from-fingerprinting-to-facial-recognition/content.mdoc": {
+	id: "the-evolution-of-biometrics-from-fingerprinting-to-facial-recognition/content.mdoc";
+  slug: "the-evolution-of-biometrics-from-fingerprinting-to-facial-recognition/content";
+  body: string;
+  collection: "stations";
+  data: any
+} & { render(): Render[".mdoc"] };
 };
 
 	};
 
+	type DataEntryMap = {
+		
+	};
+
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../src/content/config.js");
+	export type ContentConfig = never;
 }
