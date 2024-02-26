@@ -103,9 +103,7 @@ export default config({
         }),
       },
     }),
-
-
-
+    
     authors: collection({
       label: "Authors",
       path: "src/content/authors/*",
