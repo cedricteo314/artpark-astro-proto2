@@ -175,15 +175,6 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdoc"] };
 };
-"stations": {
-"test1-first-station/content.mdoc": {
-	id: "test1-first-station/content.mdoc";
-  slug: "test1-first-station/content";
-  body: string;
-  collection: "stations";
-  data: any
-} & { render(): Render[".mdoc"] };
-};
 
 	};
 
@@ -201,6 +192,8 @@ declare module 'astro:content' {
   collection: "externalArticles";
   data: any
 };
+};
+"stations": {
 };
 
 	};
