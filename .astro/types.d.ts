@@ -134,13 +134,45 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"posts": {
+		"pages": {
+"home/heading.mdoc": {
+	id: "home/heading.mdoc";
+  slug: "home/heading";
+  body: string;
+  collection: "pages";
+  data: any
+} & { render(): Render[".mdoc"] };
+"home/homepage.mdoc": {
+	id: "home/homepage.mdoc";
+  slug: "home/homepage";
+  body: string;
+  collection: "pages";
+  data: any
+} & { render(): Render[".mdoc"] };
+"homenextjs/myhome.mdoc": {
+	id: "homenextjs/myhome.mdoc";
+  slug: "homenextjs/myhome";
+  body: string;
+  collection: "pages";
+  data: any
+} & { render(): Render[".mdoc"] };
+};
+"posts": {
 "first-post.mdoc": {
 	id: "first-post.mdoc";
   slug: "first-post";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
+} & { render(): Render[".mdoc"] };
+};
+"settings": {
+"mysettings.mdoc": {
+	id: "mysettings.mdoc";
+  slug: "mysettings";
+  body: string;
+  collection: "settings";
+  data: any
 } & { render(): Render[".mdoc"] };
 };
 

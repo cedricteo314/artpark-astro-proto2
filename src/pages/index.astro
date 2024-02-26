@@ -1,10 +1,29 @@
 ---
-import { getCollection } from 'astro:content';
+import {getCollection, getEntry} from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/layout/header.tsx';
 import Footer from '../components/layout/footer.tsx';
+import keystaticConfig from "../../keystatic.config";
+import { createReader } from '@keystatic/core/reader';
+import Divider from '../components/layout/divider.tsx';
+
 
 const posts = await getCollection('posts');
+
+//const homeData = await getEntry('posts', 'first-post');
+//const { Content } = await homeData.render();
+
+// const reader = createReader('src/content/pages/home', keystaticConfig)
+// const HomepageData = await reader.singletons.homepage.read();
+//console.log("homepageData", homepageData);
+
+//const data = await reader.singletons.{singletonName}.read();
+
+const reader = createReader("src/content/homenextjs", keystaticConfig);
+const homePageData = await reader.singletons.homenextjs.read();
+console.log("homePageData", homePageData);
+
+
 ---
 
 <Layout title="Art Park Show Me Site">
@@ -14,9 +33,15 @@ const posts = await getCollection('posts');
           <Header />
           <main class="max-w-none flex flex-1 flex-col">
               <div class="flex-1">
-                  <div>THIS MIGHT BE THE ...SLOT...</div>
+                  <h1 class="text-center font-bold text-2xl max-w-xs sm:text-5xl sm:max-w-2xl lg:text-7xl lg:max-w-[60rem] mx-auto">
+                      A great place to learn about how the desert <span class="text-cyan-700">sustains life</span>.
+                  </h1>
+                  <Divider />
               </div>
+
           </main>
+
+
           <Footer />
       </div>
 
