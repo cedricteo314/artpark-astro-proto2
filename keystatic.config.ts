@@ -54,9 +54,6 @@ export default config({
     }),
   },
   collections: {
-
-
-
     stations: collection({
       label: "Stations",
       path: "src/content/stations/*/",
@@ -94,6 +91,7 @@ export default config({
           formatting: true,
           dividers: true,
           links: true,
+          images: true,
           layouts: [
             [1, 1],
             [1, 1, 1],

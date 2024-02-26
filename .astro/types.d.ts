@@ -176,6 +176,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdoc"] };
 };
 "stations": {
+"test1-first-station/content.mdoc": {
+	id: "test1-first-station/content.mdoc";
+  slug: "test1-first-station/content";
+  body: string;
+  collection: "stations";
+  data: any
+} & { render(): Render[".mdoc"] };
 };
 
 	};
@@ -185,6 +192,13 @@ declare module 'astro:content' {
 "peter-kellner": {
 	id: "peter-kellner";
   collection: "authors";
+  data: any
+};
+};
+"externalArticles": {
+"peters-blog-post/index": {
+	id: "peters-blog-post/index";
+  collection: "externalArticles";
   data: any
 };
 };
